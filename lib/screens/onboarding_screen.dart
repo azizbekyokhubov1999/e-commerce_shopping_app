@@ -2,6 +2,8 @@ import 'package:ecommerce_shopping_app/screens/welcome_screen.dart';
 import 'package:ecommerce_shopping_app/theme/theme.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/gradient_button.dart';
+
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -118,9 +120,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                 ),
-                                child: Text("Previous"),
-                            )
-                        )
+                                child: Text("Previous",
+                                style: TextStyle(
+                                  color: AppTheme.primaryColor,
+                                  fontSize: 16,
+                                ),
+                                ),
+                            ),
+                        ),
+
+                      if(_currentPage > 0) const SizedBox(width: 16),
+                        Expanded(child: GradientButton(
+
+                        ),
+                        ),
                     ],
                   )
 
